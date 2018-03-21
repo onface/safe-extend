@@ -15,7 +15,7 @@ module.exports = function safeExtend () {
     })
     return extend.apply(undefined, arg)
 }
-module.exports.deepCopy = function deepCopy(target) {
+module.exports.clone = function clone(target) {
     var emptyData = Array.isArray(target)? []: {}
     return extend(true, emptyData, target)
 }

@@ -30,7 +30,8 @@ extend(
     extend(true, {}, obj)
 )
 
-safeExtend.deepCopy(target)
+
+safeExtend.clone(target) // deep copy
 // equal
 var emptyData = Array.isArray(target)? []: {}
 extend(true, emptyData, target)

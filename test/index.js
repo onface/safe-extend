@@ -66,7 +66,7 @@ describe('extend()', function() {
             }
         })
     })
-    it('extend.deepCopy(data)', function () {
+    it('extend.clone(object)', function () {
         var data = {
             user: {
                 name: 'nimo',
@@ -75,7 +75,7 @@ describe('extend()', function() {
                 ]
             }
         }
-        var newData = extend.deepCopy(data)
+        var newData = extend.clone(data)
         expect(newData).to.eql({
             user: {
                 name: 'nimo',
@@ -101,5 +101,41 @@ describe('extend()', function() {
                 ]
             }
         })
+    })
+    it('extend.clone(array)', function () {
+        var data = [
+                {
+                    name: 'nimo'
+                },
+                {
+                    name: 'nico'
+                }
+            ]
+        var newData = extend.clone(data)
+        expect(newData).to.eql([
+                {
+                    name: 'nimo'
+                },
+                {
+                    name: 'nico'
+                }
+            ])
+        newData[0].name = 'change nimo'
+        expect(newData).to.eql([
+                {
+                    name: 'change nimo'
+                },
+                {
+                    name: 'nico'
+                }
+            ])
+        expect(data).to.eql([
+                {
+                    name: 'nimo'
+                },
+                {
+                    name: 'nico'
+                }
+            ])
     })
 })
