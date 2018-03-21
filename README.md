@@ -14,6 +14,10 @@ When you use [extend](https://www.npmjs.com/package/extend), you will encounter 
 
 **Notes:** safe-extend are based entirely on [extend](https://www.npmjs.com/package/extend). This is just a syntactic sugar.
 
+```shell
+npm install safe-extend
+```
+
 ```js
 var target = {a:1}
 var obj = {b:2}
@@ -50,10 +54,8 @@ Notes:
 
 ## Installation
 
-This package is available on [npm][npm-url] as: `extend`
-
 ``` sh
-npm install extend
+npm install safe-extend
 ```
 
 ## Usage
@@ -65,7 +67,7 @@ npm install extend
 **Example:**
 
 ``` js
-var extend = require('extend');
+var extend = require('safe-extend');
 extend(targetObject, object1, object2);
 ```
 
