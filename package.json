@@ -1,6 +1,6 @@
 {
   "name": "safe-extend",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "safe extend (Simple function to extend objects)",
   "main": "index.js",
   "scripts": {
