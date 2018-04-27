@@ -16,5 +16,8 @@ module.exports = function safeExtend () {
     return extend.apply(undefined, arg)
 }
 module.exports.clone = function clone(target) {
-    return JSON.parse(JSON.stringify(target))
+    if (Array.isArray(target)) {
+        return extend(true, [], target)
+    }
+    return extend(true, {}, target)
 }
