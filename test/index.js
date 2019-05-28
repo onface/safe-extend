@@ -138,4 +138,13 @@ describe('extend()', function() {
                 }
             ])
     })
+    it('extend.clone(null false 1 "abc" undefined symbol)', function () {
+      expect(extend.clone(null)).to.eql(null)
+      expect(extend.clone(false)).to.eql(false)
+      expect(extend.clone(1)).to.eql(1)
+      expect(extend.clone("abc")).to.eql("abc")
+      expect(extend.clone(undefined)).to.eql(undefined)
+      let symbol = Symbol('abc')
+      expect(extend.clone(symbol)).to.eql(symbol)
+    })
 })
